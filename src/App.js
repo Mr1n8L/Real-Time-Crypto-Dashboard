@@ -12,6 +12,7 @@ export default class App extends Component {
     }
   }
   fetchData = async () => {
+    //fetching api key from server
     let data = await fetch('https://api.coingecko.com/api/v3/coins/'+ this.state.Id)
     let JsonData = await data.json()
     this.setState({ Id: this.state.Id, Data: JsonData })
